@@ -11,8 +11,9 @@ class nagios::server (
   $url_path             = '/nagios',
   $usr_path             = '/usr/sbin',
   $cmd_path             = '/var/spool/nagios/cmd/nagios.cmd',
-  $mailx_pkg            = 'bsd-mailx',
+  $mailx_pkg            = 'mailx',
   $check_result_path    = '/var/log/nagios/spool/checkresults',
+  $pid_file             = $::nagios::params::pid_file,
   $apache_httpd         = true,
   $apache_httpd_ssl     = true,
   $apache_httpd_modules = [
